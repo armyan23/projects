@@ -1,0 +1,31 @@
+@font-face{
+    font-family:'clock-font';
+    src: url('dig.ttf');
+   }
+main{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    background-image: url("../img/clock.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+main div{
+    user-select: none;
+    position: absolute;
+    font-size: 87px;
+    letter-spacing: 8px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    top: 254px;
+    left: 117px;
+    left: 87px;
+    font-family: 'clock-font';
+    transform: skew(-7deg, 0deg) ;
+    color: #62dffb;
+    text-shadow: 0px 2px 9px rgb(38 64 213);
+    /* text-shadow: -1px 0 #2d61f5, 0 1px #2d61f5, 1px 0 #2d61f5, 0 -1px #2d61f5; */
+
+}
+
+/* color clock #b7fffc */

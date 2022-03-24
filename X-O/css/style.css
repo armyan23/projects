@@ -1,0 +1,46 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    position: absolute;
+}
+.points{
+    width: 160px;
+    height: max-content;
+    background-color: rgb(133, 207, 234);
+}
+.points > div{
+    width: calc(50% - 2px);
+    height: 60px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid black;
+    vertical-align: top;
+}
+main{
+    width: 300px;
+    height: 300px;
+    margin :0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items:center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+main button{
+    width: 80px;
+    height: 80px;
+    background-color: #85cfea;
+    border: 1px solid black;
+    box-shadow: 2px 2px 15px rgb(115 218 255);
+    font-size: 35px;
+}
+.clearBtn{      
+    margin: 20px auto;
+    width: 100px;
+    height: 40px;
+    grid-column: 1/3;
+    position: relative;
+    left: 80px; 
+}
