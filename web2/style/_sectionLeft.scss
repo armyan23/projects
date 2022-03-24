@@ -1,0 +1,256 @@
+@mixin statisticDiv($height){
+    margin: 0 auto;
+    width: 8px;
+    height: $height;
+    cursor: pointer;
+    background: linear-gradient(180deg, #623CE7 0%, #9C3CE7 100%);
+    border-radius: 4px;
+    &:hover{
+        border: 1px solid #869bff;
+    }
+}
+.sectionLeft{
+    
+    grid-area: left;
+    width: 317px;
+    padding: 46px 0 0 33px ;
+    background-color:  var(--sectionMenuLeft);
+    .profilNameLogo{
+        display: flex;
+        align-items: center;
+        height: 65px;
+        margin-bottom: 83px;
+        & img{
+            width: 65px;
+            margin-right: 23px;
+            cursor: pointer;
+        }
+        & p:nth-child(1){
+            @include font(700, 20px, black );
+            cursor: pointer;
+        }
+        & p:nth-child(2){
+            @include font(400, 14px, black );
+            opacity: 0.3;
+        }
+    }
+    .navBarMain{
+        margin-bottom: 63px;
+    }
+    .goalsNavBar{
+        @include navBar(#FFF0E6,19px);
+        margin-bottom: 33px;
+        &:hover div:first-child{
+            border:1px solid #FC6B21;
+        }
+    }
+    .monthsPlanNavBar{
+        @include navBar(#ECEAFE,20px);
+        margin-bottom: 33px;
+        &:hover div:first-child{
+            border:1px solid #5531FB;
+        }
+    }
+    .settingsNavBar{
+        @include navBar(#E5F7FF,21px);
+        &:hover div:first-child{
+            border:1px solid #1FB9FC;
+        }
+    }
+    
+// Table
+    .activityGraph{ 
+        // height: 200px;
+        margin-bottom: 37px;
+    }
+    table{
+        width: 241px;
+        @include font(400,11px,#AEAEAE);
+        tr:nth-child(n + 2) > td:first-child:not(.nineNoneHr){
+            text-align: end;
+            padding-right: 5px;
+        }
+    }
+    .headerGraph {
+        span:nth-child(1){
+            @include font(700,14px,#4C6072);
+            display: inline-block;
+            padding:4px 80px 17px 4px; 
+        }
+        span:nth-child(2){
+            @include font(500,20px,#333333);
+            font-family: var(--fontCash);
+        }
+    }
+    .hrRelative{
+        position: relative;
+        hr{
+            position: absolute;
+            top: 7px;
+            left: 27px;
+            width: 217px;
+            border: 1px solid #F0F0F0;
+        }
+        
+    }
+    .zeroHr hr{
+            width: 217px;
+            border: 1px solid #F0F0F0;
+        }
+    .zGraph td:nth-child(2){
+        width: 14px;
+    }
+    .zGraph td:nth-child(n + 3){
+        width: 10px;
+     }
+     .zGraph{
+         vertical-align: bottom;
+         position: relative;
+         z-index: 5;
+     }
+     .zGraph td{
+         position: relative;
+     }
+     
+     .zGraph td:nth-child(n + 2){
+        height: 62px;
+        padding: 0 0 2px;
+        // padding-bottom: 3px;
+     }
+    .zGraph td:nth-child(2) > div{
+        @include statisticDiv(16px);
+    }
+    .zGraph td:nth-child(3) > div{
+        @include statisticDiv(14px);
+    }
+    .zGraph td:nth-child(4) > div{
+        @include statisticDiv(17px);
+    }
+    .zGraph td:nth-child(5) > div{
+        @include statisticDiv(23px);
+    }
+    .zGraph td:nth-child(6) > div{
+        @include statisticDiv(20px);
+    }
+    .zGraph td:nth-child(7) > div{
+        @include statisticDiv(21px);
+    }
+    .zGraph td:nth-child(8) > div{
+        @include statisticDiv(23px);
+    }
+    .zGraph td:nth-child(9) > div{
+        @include statisticDiv(9px);
+    }
+    .zGraph td:nth-child(10) > div{
+        @include statisticDiv(27px);
+    }
+    .zGraph td:nth-child(11) > div{
+        @include statisticDiv(29px);
+    }
+    .zGraph td:nth-child(12) > div{
+        @include statisticDiv(23px);
+    }
+    .zGraph td:nth-child(13) > div{
+        @include statisticDiv(42px);
+    }
+    .zGraph td:nth-child(14) > div{
+        @include statisticDiv(35px);
+    }
+    .zGraph td:nth-child(15) > div{
+        @include statisticDiv(49px);
+    }
+    .zGraph td:nth-child(16) > div{
+        @include statisticDiv(55px);
+    }
+    .zGraph td:nth-child(17) > div{
+        @include statisticDiv(44px);
+    }
+    .zGraph td:nth-child(18) > div{
+        @include statisticDiv(31px);
+    }
+    .zGraph td:nth-child(19) > div{
+        @include statisticDiv(17px);
+    }
+    .zGraph td:nth-child(20) > div{
+        @include statisticDiv(22px);
+    }
+    .bottomNumber{
+        text-align: center;
+        font-size: 9px;
+    }
+// Dayss
+    .whichDays > p{
+        @include font(400,9px,#979797);
+        margin-bottom: 6px;
+    }
+    @mixin wichDays($bgc,$color) {
+        display: flex;
+        width: 253px;
+        div:nth-child(1){
+            width: 31px;
+            height: 31px;
+            margin-right: 9px;
+            background-color: $bgc;
+            box-shadow: 0px 3.86842px 23.2105px rgba(0, 0, 0, 0.05);
+            border-radius: 7.73684px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 9px;
+            height: 12px;
+        }
+        p:nth-of-type(1){
+            line-height: 12px;
+        }
+        span:nth-of-type(1){
+            @include font(400,12px,#343434);
+            cursor: pointer;
+        }
+        span:nth-of-type(2){
+            @include font(400,9px,#989898);
+        }
+        p:nth-of-type(2){
+            @include font(400,12px,$color);
+            font-family: var(--fontCash);
+            margin-left: auto;
+        }
+    }
+    .whichDays > hr {
+        width: 253px;
+        border:1px solid #ECECEC;
+        margin: 9px 0 12px;
+    }
+    .conteinerDays{
+        @include wichDays(#3629B7,#FF4267);
+        &:hover div:first-child{
+            border: 1.5px solid #7265ff;
+        }
+    }
+    .conteinerIncome{
+        @include wichDays(#FF4267,#3629B7);
+        &:hover div:first-child{
+            border: 1.5px solid #ff7c96;
+        }
+    }
+    .conteinerElectric{
+        @include wichDays(#0890FE,#FF4267);
+        &:hover div:first-child{
+            border: 1.5px solid #74c0ff;
+        }
+    }
+    .conteinerIncomeJane{
+        @include wichDays(#FFAF2A,#3629B7);
+        &:hover div:first-child{
+            border: 1.5px solid #ffd592;
+        }
+    }
+    .conteinerInternetBill{
+        @include wichDays(#52D5BA,#FF4267);
+        &:hover div:first-child{
+            border: 1.5px solid #00ffcc;
+           
+        }
+    }
+}
