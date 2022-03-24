@@ -77,4 +77,4 @@ for (let i = 0; i < operation.length; i++) {
         }
     })
 }
-document.body.prepend(calcMain);
+document.body.append(calcMain);
