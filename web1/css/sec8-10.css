@@ -1,0 +1,121 @@
+/* SECTIONNNNNNNNNNNN 8 */
+.section8{
+    width: 100%;
+    padding-bottom: 5%;
+    /* background-color: red; */
+}
+.signUp{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    min-width: 470px;
+    /* height: 100px; */
+    /* background-color: royalblue; */
+}
+.signUp h2{
+    font-size: clamp(23px, 3vw, 28px);
+    margin-bottom: 3%;
+}   
+.signUp input:hover{
+    border-color: black;
+}
+.signUp input{
+    background-color:white;
+    border-color: #a1a1a1;
+}
+.signUp .registerInput{
+    margin: 0 auto;
+    display: block;
+}
+
+.signUp .registerInput {
+    max-width: 82%;
+}
+.signUp .registerInput label{
+    font-size: clamp(11px, 1vw, 12px);
+}
+.signUp button{
+    border: none;
+    background-color: var(--mainColor);
+}
+.signUp button:hover{
+    background-color: transparent;
+    border-color: black;
+}
+
+.iconSochialNetwork{
+    width: 100%;
+    margin-top: 5%;
+    /* background-color: red; */
+}
+.iconSochialNetwork .menuSoc{
+    margin: 0 auto;
+    /* background-color: rebeccapurple; */
+    max-width: 360px;
+
+}
+.iconSochialNetwork .menuSoc img{
+    width: 85%;
+    padding: 10px;
+}
+.iconSochialNetwork .menuSoc span{
+    width: 18%;
+    display: inline-block;
+    aspect-ratio: 1;
+}
+.iconSochialNetwork .menuSoc  img:hover{
+    border: 1px solid black;
+    background-color: transparent;
+}
+
+
+/* SECTIOOOOOOOOOOOOOOON 9 */
+
+.section9{
+    width: 100%;
+    padding: 5% 0;
+    background-color: var(--mainColor);
+}
+.submit{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.submit > div{
+    margin: 0 auto;
+    display:inline-block;
+    width: 50%;
+    min-width: 470px;
+    /* background-color: burlywood; */
+}
+.submitInfo{
+    padding-top: 2%;
+}
+.submit h2{
+    margin: 0;
+}
+.iconText img{
+    width: 14px;
+}
+.iconText + a{
+    color: #333;
+    text-decoration: underline;
+}
+.submitInput{
+    padding: 0;
+}
+.submitInput textarea{
+    outline: none;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: 100px;
+    margin-bottom: 2%;
+    font-family: revert;
+    padding: 3% 4% 0;
+    border-radius: 7px;
+    border: 1px solid #ffedd0;
+    background-color: #ffedd0;
+}

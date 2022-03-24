@@ -1,0 +1,216 @@
+/* SECTIONNNNNNNNNNN $ VIDEOOOOOOOOO */
+.section4{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.youTubeDiv{
+    display: block;
+    width: 70%;
+    aspect-ratio: 2;
+    margin: 0 auto;
+    min-width: 460px;
+}
+.youTubeDiv iframe{
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* SECTIOOOOOON  5    key Takeaways */
+.section5{
+    width: 100%;
+    padding-bottom: 6%;
+}
+.keyTakeaways p{
+    margin: 0 auto;
+    text-align: center;
+    width: 51%;
+    font-size: clamp(11px,2vw,18px);
+}
+.takeawaysMain{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 450px;
+    /* height: 500px; */
+    /* background-color: rebeccapurple; */
+}
+.takeawaysOneTwo{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    min-width: 50%;
+    /* height: 50%; */
+    /* background-color: chocolate; */
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+.takeawaysOneTwo > div{
+    display: inline-block;
+    width: 31%; 
+    background-color: #ffffff;
+    vertical-align: top;
+    border-radius: 5px;
+    padding-bottom:5%;
+}
+.takeawaysIconImg  img{
+    width: 70px;
+    padding-top: 10px;
+    display: block;
+    margin: 0 auto;
+}
+.takeawaysIconImg{
+    margin: 30% auto 15%;
+    background-color: #fbf9f5;
+    width: 90px;
+    aspect-ratio: 1; 
+    border-radius: 50%;
+}
+.takeawaysHeaderH2{
+    text-align: center;
+    color: #333;
+    margin: 5% auto 3%;
+    font-size: clamp(18px,3vw, 32px);
+    font-weight: 600;
+    text-align: center;
+}
+.takeawaysOneTwo p{
+    text-align: center;
+    padding: 0 8%;
+    font-size: clamp(11px,2vw, 20px );
+    word-break: break-all;
+}
+.takeawaysTwo{
+    margin-top: 8%;
+}
+
+
+
+
+
+
+
+
+/* sectIOOOOOOOOOON 5 */
+.section6{
+    padding-bottom: 5%;
+    
+}
+.section6 h2{
+    min-width: 60%;
+    margin-top: 0;
+    font-size: clamp(20px,3vw, 35px);
+}
+/* .section6::before{
+    content: url(img/icon/leftArroiwBlack.png);
+    width: 25px;
+    height: 30px;
+} */
+.progrommerSlider{
+    margin: 0 auto;
+    width: 100%;
+    /* height: 200px; */
+    max-width: 1000px;
+    min-width: 470px;
+    /* background-color: seagreen; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.progrommerSlider > div{
+    margin: 0 auto;
+    display: inline-block;
+    width: 45%;
+    min-width: 470px;
+    padding: 3% 0;
+    /* height: 90px; */
+}
+
+.progrommerSliderImg{
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+}
+.progrommerSliderP{
+    display: inline-block;
+    width: 80%;
+    
+    padding-left: 40px;
+}
+.progrommerSlider img{
+    width: 100px;
+    border-radius: 5px;
+}
+.progrommerSlider p{
+    font-size: 20px;
+    font-style: italic;
+    font-family: emoji;
+}
+.progrommerSlider h3{
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECIOOOOOOOOOOOOOOONNNNNNNNNNNNNNNNN 7 */
+.section7{
+    padding-bottom: 5%;
+    
+}
+.innovationHub{
+    background: linear-gradient(to bottom right,rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(../img/innovationHub.jpg);
+    background-size: cover;
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 470px;
+    padding-bottom: 12%;
+    background-position: center;
+}
+.innovationHub > div{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 950px;
+    min-width: 470px;
+}
+.innovationHub h2{
+    color: #eee;
+    font-size: clamp(40px, 3vw, 47px);
+    padding-top: 12%;
+}
+.innovationHub p{    
+    color: #ddd;
+    text-align: center;
+    font-size: clamp(20px, 3vw, 22px);
+    padding: 1% 0 4%;
+}
+.innovationHub .buttom{
+    color: black;
+    font-size: 22px;
+    width: 180px;
+    margin: 0 auto;
+}
+.innovationHub .buttom:hover a{
+    border-color: white;
+    color: white;
+}

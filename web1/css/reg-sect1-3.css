@@ -1,0 +1,271 @@
+/* Registorrrrrr////////// */
+.registerSection{
+    padding:7% 0;
+    width: 100%;
+    /* min-width: 480px; */
+    height: auto;
+    background-color:  var(--mainColor);
+}
+.registerText{
+    margin-bottom: 3%;
+}
+.registerText h2{
+    margin-top: 25px;
+}
+.registerText p{
+    margin-bottom: 25px;
+    color: #333;
+}
+.registerText ul li{
+    list-style-type: square;
+    margin-bottom: 7px;
+    margin-left: 20px;
+    color: #333;
+}
+.registerText, .registerInput{
+    margin: 0 auto 3%;
+    display: inline-block;
+    vertical-align: top;
+    /* width: 50%; */
+    max-width: 50%;
+    min-width: 440px;
+    height: auto;
+}
+.registerText ul li span{
+    font-weight: 600;
+}
+.registerInput{
+    padding: 0 3%;
+}
+.registerInput  input{
+    outline: none;
+    width: 100%;
+    height: 46px;
+    margin-bottom: 5%;
+    padding: 0 5%;
+    border-radius: 7px;
+    border: 1px solid #ffedd0;
+    background-color: #ffedd0;
+    font-family: revert;
+}
+.registerInput label{
+    color: #333;
+    font-size: 11px;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+#chekboxAgree, #chekboxAgreeSign, #chekboxAgreeSubmit{
+    width: 10px;
+    height: 10px;
+}
+.registerInput label a{
+    color: #333;
+    text-decoration: underline;
+}
+.registerInput button{
+    font-family: emoji;
+    width: 100%;
+    height: 46px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 1px solid black;
+    background-color: transparent;
+    font-weight: 600;
+}
+.registerInput button:hover{
+    border-radius: 25px;
+    border: 1px solid #ffedd0;
+    background-color: #ffedd0;
+}
+.registerInput input:hover{
+    border-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTIONNNNNN */
+#registerSection{
+    background-color: var(--mainColor);
+    padding: 6% 0;
+}
+/* sectiomnnnnnnnnnnnnn */
+.sliderText p{
+    text-align: center;
+    padding: 50px 0 10px;
+}
+.sliderText{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+    min-width: 480px;
+    padding-bottom: 50px ;
+}
+.sliderText img{
+    margin: 0 2%;
+    width: 14%;
+    min-width: 14%;
+}
+
+.generalTrainer > div{
+    margin: 0 auto;
+    vertical-align: top;
+    display: inline-block;
+}
+.imgTrainer img{
+    width: 100%;
+    border-radius: 5px;
+}
+.imgTrainer{ 
+    width: 40%;
+    min-width: 420px;
+}
+.infoTrainer{
+    padding: 1% 0 0 3%;
+    width: 55%;
+    min-width: 420px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTIONNNNNN  2*/
+.section2{
+    /* height: 500px; */
+    width: 100%;
+}
+
+ol{
+    width: 100%;
+    counter-reset: myCounter;
+    
+}
+.listOnlyGood{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 480px;
+}
+.listLearnInOurSEO{
+    width: 100%;
+}
+.listOnlyGood > div{
+    margin: 0 auto;
+    padding-left: 80px;
+    display: inline-block;
+    width: 50%;
+    min-width: 480px;
+
+}
+.listLearnInOurSEO li {
+    padding-bottom: 20px;
+    list-style: none;
+    position: relative;
+    z-index: -5;
+}
+.listLearnInOurSEO li div{
+    display: inline-block;
+}
+.listLearnInOurSEO li h4{
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 15px;
+    color: #333;
+}
+.listLearnInOurSEO li p{
+    color: #555;
+    font-size: 18px;
+}
+.listLearnInOurSEO li:before {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    display: inline-block;
+    position: absolute;
+    left: -65px;
+    border-radius: 50%;
+    background-color: var(--mainColor);
+    width: 40px;
+    aspect-ratio: 1;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* Sectionnnnnnnnnnnn 3 */
+.section3{
+    margin: 5% 0;
+}
+  
+  .trainingCourseText, .trainingCourseImg{
+      display: inline-block;
+      width: 50%;
+      min-width: 470px;
+      margin: 0 auto;
+      max-width: 570px;
+  }
+.trainingCourseText{
+    padding: 30px 50px 0 0;
+    margin-bottom: 35px;
+}
+
+.trainingCourseText div{
+    width: 100%;
+    margin-top: 20px;
+}
+.buttomOrangeLightbox:hover{
+    color: black;
+    border:2px solid black;
+}
+
+
+.trainingCourseText h2{
+margin-bottom: 10px;
+}
+.buttomOrangeLightbox{
+    color: black;
+}
+.trainingCourseImg img{
+    margin: 0 auto;
+    display: inline-block;
+    width: 90%;
+    min-width: 440px;
+    max-width: 570px;
+    border-radius: 5px;
+}
