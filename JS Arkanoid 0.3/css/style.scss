@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent{
+    width: max-content;
+    margin: 15px;
+}
+.canvasT{
+    canvas{
+        width: 400px;
+        border: 1px solid black;
+    }
+}
+.buttonParent{
+    margin-top: 15px;
+    position: relative;
+
+    button{
+        padding: 10px 40px;
+        position: absolute;
+    }
+    .buttonStart{
+        left: 10%;
+    }
+    .buttonRestart{
+        right:  10%;
+    }
+
+}
