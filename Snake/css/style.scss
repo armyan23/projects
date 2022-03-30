@@ -5,6 +5,10 @@ table{
     border: 1px solid black;
     /* border-collapse: collapse; */
 }
+#parent{
+  display: grid;
+  justify-content: center;
+}
 td, td{
     text-align: center;
     border: 1px solid black;

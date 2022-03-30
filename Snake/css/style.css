@@ -6,6 +6,14 @@ table {
   /* border-collapse: collapse; */
 }
 
+#parent {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 td, td {
   text-align: center;
   border: 1px solid black;
