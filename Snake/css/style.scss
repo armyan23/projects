@@ -16,6 +16,7 @@ td, td{
 
 }
 #buttons{
+    position: relative;
     button{
         display: inline-block;
         margin: 30px 20px;
@@ -26,7 +27,7 @@ td, td{
     #pausaBtn{
         position: absolute;
         visibility: hidden;
-        left: 8px;
+        left: 0px;
     }
 }
 span{
