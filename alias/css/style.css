@@ -140,6 +140,29 @@ main {
   margin: 0 auto;
 }
 
+.startBtnParent {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 160px 0;
+}
+
+.startBtnParent #startBtn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 20px;
+  height: 60px;
+}
+
+#clickStart {
+  display: none;
+}
+
 #playZone {
   display: none;
 }

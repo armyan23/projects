@@ -22,6 +22,8 @@ const firstTeam = document.getElementById("firstTeam")
 const firstPoint = document.getElementById("firstPoint")
 const secondTeam = document.getElementById("secondTeam")
 const secondPoint = document.getElementById("secondPoint")
+const startBtn = document.getElementById('startBtn')
+const clickStart = document.getElementById('clickStart')
 let pointFirst = 0
 let pointSecond = 0
 let change = true
@@ -36,21 +38,21 @@ form.addEventListener("submit",function(e) {
     logoAlias.style.display = "none"
     playZone.style.display = "block"
     
-    
     teams = Array.from(new FormData(this))
     teams[0][1] ? firstTeam.textContent = `Team ${teams[0][1]}`: null
     teams[1][1] ?  secondTeam.textContent = `Team ${teams[1][1]}` : null
-    listWords(teams[0][1],teams[1][1])
 })
 
-
-function listWords(team1, team2) {
-    let time = 60
-    
-    if(change) team1 ? turnTeam.textContent = `Turn of the ${team1}` : turnTeam.textContent = `Turn of the first team`
-    else team2 ? turnTeam.textContent = `Turn of the ${team2}` : turnTeam.textContent = `Turn of the second team`
-
-    //Creat checkbox
+startBtn.addEventListener('click',function(e) {
+    if(!change) e.target.textContent = teams[0][1] ? `Start team ${teams[0][1]}`: `Start team first`
+    else e.target.textContent = teams[1][1] ?  `Start team ${teams[1][1]}`: `Start team second`
+    wordsParent.textContent = ''
+    clickStart.style.display = "block"
+    e.target.parentElement.style.display = 'none'
+    listWords(teams[0][1],teams[1][1])
+    // clearInterval(interval)
+})
+function creatInputList(){
     for (let i = 0; i <  6; i++) {
         let random =  Math.floor(Math.random()*changedArr.length)
         let label = document.createElement("label")
@@ -66,29 +68,52 @@ function listWords(team1, team2) {
         wordsDiv.append(label)    
         wordsParent.append(wordsDiv)
     }
+}
+
+let time = 60
+function listWords(team1, team2) {
     
+    if(change) team1 ? turnTeam.textContent = `Turn of the ${team1}` : turnTeam.textContent = `Turn of the first team`
+    else team2 ? turnTeam.textContent = `Turn of the ${team2}` : turnTeam.textContent = `Turn of the second team`
+
+    //Creat checkbox
+    creatInputList()
+    let bonus = 0
     let interval = setInterval(function() {
+    
         
 
-        timerDiv.textContent = `${--time}`
+        if(checkedInput(bonus) == 6) {
+            change ? pointFirst += checkedInput(bonus) : pointSecond += checkedInput(bonus)
+            clearInterval(interval)
+            listWords(team1,team2)
+            wordsParent.textContent = ''
+            creatInputList()
+        }
         if(time == 0) {
-            const checkboxList = Array.from(document.querySelectorAll('#words input'))
-            for(let i of checkboxList){
-                if(i.checked && change) {
-                    pointFirst++
-                }else if(i.checked && !change){
-                    pointSecond++
-                }
-            }
+            change ? pointFirst += checkedInput(bonus) : pointSecond += checkedInput(bonus)
+            wordsParent.textContent = ''
+            clearInterval(interval)
+            clickStart.style.display = "none"
+            startBtn.parentElement.style.display = 'flex'
             firstPoint.textContent = `Point ${pointFirst}`
             secondPoint.textContent = `Point ${pointSecond}`
-            clearInterval(interval)
-            wordsParent.textContent = ''
             change = !change
-            pointFirst >=   100 || pointSecond >= 100 ? win() : listWords(team1,team2)
+            pointFirst >=   100 || pointSecond >= 100 ? win() : null
+            time = 60
         }
-        
+        timerDiv.textContent = `${time--}`
     },1000)
+}
+
+function checkedInput(bonus){
+   
+    const checkboxList = Array.from(document.querySelectorAll('#words input'))
+    for(let i of checkboxList){
+        i.checked ? bonus++ : 0
+    }
+
+    return bonus 
 }
 
 function win(){

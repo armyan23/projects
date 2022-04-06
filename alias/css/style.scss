@@ -121,7 +121,21 @@ main{
         }
     }
 }
+.startBtnParent{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 160px 0;
+    #startBtn{
+        width: max-content;
+        padding: 0 20px ;
+        height: 60px;
+    }
+}
+#clickStart{
+    display: none;
 
+}
 //Play zone
 #playZone{
     display: none;
