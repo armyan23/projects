@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    margin: 0 auto;
+    padding: 3% 0;
+    width: 100%;
+    min-width: 200px;
+    max-width: 1000px;
+    background: #DAF0FF;
+    .background{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto;
+        width: 90%;
+        max-width: 700px;
+        aspect-ratio: 1;
+        border-radius: 100%;
+        background: #109DFF;
+    }
+}
+
+.calcParent{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 45%;
+    height: 90%;
+    background: linear-gradient(167.27deg, #F7F8FB -5.94%, rgba(247, 248, 251, 0.19) 103.62%);
+    backdrop-filter: blur(102px);
+    border-radius: 39px;
+    h1, h3,h4{
+        margin: 0;
+        text-align: end;
+        padding-right: 10%;
+        content-visibility: auto;
+    }
+    h4,h3{ 
+        font-size: clamp(12px, 4vw, 25px);
+        height: clamp(10px,5vw,38px);
+        color: #818181;
+    }
+    h1{
+        font-size: clamp(12px, 5vw, 40px);
+        margin-bottom: 10% ;
+        height: clamp(9px, 7vw, 50px);
+
+    }
+    h3{
+        margin-top: 10%;
+    }
+    
+    .smallParent,.smallParentFooter {
+        display: flex;    
+        justify-content: space-between;
+        margin-bottom: 10%;
+        padding: 0 8%;
+    }
+    .smallChild{
+        cursor: pointer;
+        font-size: clamp(8px, 4vw, 25px);
+        width: clamp(8px,6vw, 50px);
+        height: clamp(8px, 6vw, 50px);
+        line-height: clamp(8px,6vw, 50px);
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: linear-gradient(129.7deg, rgba(255, 255, 255, 0.6) -9.69%, rgba(255, 255, 255, 0.4) 114.23%);
+        border-radius: 12px;  
+        &:hover{
+            background-color: #359eff4a;
+        } 
+    }
+    .vertical{
+        display: flex;
+        >:first-child{
+            width: 75%;
+        }
+        .smallParentFooter{
+            display: flex;
+        }
+        .smallChildEquals{
+            @extend .smallChild;
+            height:  clamp(22px, 17vw, 133px);
+            line-height: clamp(22px,17vw, 133px);
+            background: #19ACFF;
+            box-shadow: 28px 3px 23px rgba(0, 163, 255, 0.26),inset 1px 8px 37px #b0dfff;
+        }
+        .smallChildZero{
+            @extend .smallChild;
+            width: clamp(40px, 15vw, 120px);
+        }
+    }
+    .actionColor{
+        background: linear-gradient(203.57deg, #ADD8FF -8.99%, rgba(173, 216, 255, 0.28) 111.42%) ;
+        box-shadow: inset 0px 0px 9px rgba(255, 255, 255, 0.43) ;
+    }
+}
+
