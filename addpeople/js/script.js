@@ -11,7 +11,12 @@ document.getElementById('formWindowBtn').addEventListener('click', function(){
     else if(!toggle) document.getElementById('formWindow').style.display = 'none'
     toggle = !toggle 
 })
+document.getElementById('closeWindow').addEventListener('click',function(e) {
+    document.getElementById('formWindow').style.display = 'none'
+    toggle = !toggle 
+    console.log('poo')
 
+})
 // Data Registr
 function timeReg(par){
     let date = new Date()
@@ -30,7 +35,7 @@ function timeReg(par){
 }
 
 
-// icons EDIT and DELET
+// icons EDIT, DELET, INFO
 function icons(icon, td) {
     const img = document.createElement("img");
     
@@ -42,103 +47,117 @@ function icons(icon, td) {
            img.parentElement.parentElement.remove()
            let thisId = img.parentElement.parentElement.firstChild.textContent
            localStorage.removeItem(`id_${thisId}`)
-        }else if(icon === "edit") {
-            //    console.log(img.parentElement.parentElement.childNodes)
-            const imgOk= document.createElement("img");
-            const imgCa = document.createElement("img");
-            imgOk.style.marginRight = "15px"
-            imgCa.classList.add("icons")
-            imgOk.classList.add("icons")
+        }
+        else if(icon === "edit") {
+               console.log(img.parentElement.parentElement.childNodes)
+        //     const imgOk= document.createElement("img");
+        //     const imgCa = document.createElement("img");
+        //     imgOk.style.marginRight = "15px"
+        //     imgCa.classList.add("icons")
+        //     imgOk.classList.add("icons")
             
-            imgCa.setAttribute("src", `img/cancele.png`)
-            imgOk.setAttribute("src", `img/okay.png`)
-            td.append(imgOk, imgCa)
-            img.hidden = true
+        //     imgCa.setAttribute("src", `img/cancele.png`)
+        //     imgOk.setAttribute("src", `img/okay.png`)
+        //     td.append(imgOk, imgCa)
+        //     img.hidden = true
             // console.log(Array.from(img.parentElement.parentElement.childNodes))
-             Array.from(img.parentElement.parentElement.childNodes).forEach((elem,index,arr) => {
+            //  Array.from(img.parentElement.parentElement.childNodes).forEach((elem,index,arr) => {
                 
-                if(index > 1 && index < arr.length-5){
-                    let inp = document.createElement("input")
-                    inp.value = arr[index].textContent
-                    // inp.value = arr[1].textContent
-                    inp.name = form.children[index-2].name
-                    elem.textContent = ""
-                    inp.classList.add("editInput")
-                    inp.setAttribute("type","text")
-                    elem.appendChild(inp)
-                }
+            //     if(index > 1 && index < arr.length-3){
+            //         let inp = document.createElement("input")
+            //         inp.value = arr[index].textContent
+            //         // inp.value = arr[1].textContent
+            //         inp.name = form.children[index-2].name
+            //         elem.textContent = ""
+            //         inp.classList.add("editInput")
+            //         inp.setAttribute("type","text")
+            //         elem.appendChild(inp)
+            //     }
 
-            })
+            // })
             //  // FUNCTION FILL TD general CACLE and EDIT
-             function fillGeneral(arrValue) {
-                img.hidden = false
-                imgOk.hidden = true
-                imgCa.hidden = true
+            //  function fillGeneral(arrValue) {
+            //     img.hidden = false
+            //     imgOk.hidden = true
+            //     imgCa.hidden = true
 
-                Array.from(img.parentElement.parentElement.childNodes).forEach((elem,index,arr) => {
-                    if(index > 1 && index < arr.length-5){
-                        elem.childNodes[0].remove()
-                        elem.textContent = arrValue[index-2]
-                    }
-                })
-            }
+            //     Array.from(img.parentElement.parentElement.childNodes).forEach((elem,index,arr) => {
+            //         if(index > 1 && index < arr.length-3){
+            //             elem.childNodes[0].remove()
+            //             elem.textContent = arrValue[index-2]
+            //         }
+            //     })
+            // }
             //EDIT EVENT 
-           imgOk.addEventListener("click", function(e) {
-                let thisId = td.parentElement.childNodes[0].textContent
-                let arrValue = []
-                let editObject =  Array.from(td.parentElement.childNodes).reduce((acc,elem) => {
-                    if(elem.childNodes[0].name){
-                        let editVal = elem.childNodes[0].value
-                        let editName = elem.childNodes[0].name
-                        acc[editName] = editVal
-                        arrValue.push(editVal)
-                    }
-                    return acc
-                },{})
+        //    imgOk.addEventListener("click", function(e) {
+        //         let thisId = td.parentElement.childNodes[0].textContent
+        //         let arrValue = []
+        //         let editObject =  Array.from(td.parentElement.childNodes).reduce((acc,elem) => {
+        //             if(elem.childNodes[0].name){
+        //                 let editVal = elem.childNodes[0].value
+        //                 let editName = elem.childNodes[0].name
+        //                 acc[editName] = editVal
+        //                 arrValue.push(editVal)
+        //             }
+        //             return acc
+        //         },{})
                 
-                let editing = JSON.parse(localStorage.getItem(`id_${thisId}`))
-                for(let o in editing){
-                    for(let x in editObject){
-                        if(x == o) {
-                            editing[o] = editObject[x]
-                        }
-                    }
-                }
-                localStorage.setItem(`id_${thisId}`, JSON.stringify(editing))
-                fillGeneral(arrValue)
-           })
+        //         let editing = JSON.parse(localStorage.getItem(`id_${thisId}`))
+        //         for(let o in editing){
+        //             for(let x in editObject){
+        //                 if(x == o) {
+        //                     editing[o] = editObject[x]
+        //                 }
+        //             }
+        //         }
+        //         localStorage.setItem(`id_${thisId}`, JSON.stringify(editing))
+        //         fillGeneral(arrValue)
+        //    })
         //    CANCLE ICON EVENT
-           imgCa.addEventListener("click", function() {
+        //    imgCa.addEventListener("click", function() {
                 
-                let arrValue = []
-                let editObject =  Array.from(td.parentElement.childNodes).map((elem) => {
-                    if(elem.childNodes[0].name){
-                        let editVal = elem.childNodes[0].value
-                        arrValue.push(editVal)
-                    }
-                })
-                fillGeneral(arrValue)
+        //         let arrValue = []
+        //         let editObject =  Array.from(td.parentElement.childNodes).map((elem) => {
+        //             if(elem.childNodes[0].name){
+        //                 let editVal = elem.childNodes[0].value
+        //                 arrValue.push(editVal)
+        //             }
+        //         })
+        //         fillGeneral(arrValue)
 
-           })
-        }else if(icon === "info" ) {
+        //    })
+        }
+        else if(icon === "info") {
             let thisObj = JSON.parse(localStorage.getItem(`id_${img.parentElement.parentElement.firstChild.textContent}`))
             const infoDiv = document.querySelector(".infoDiv")
             infoDiv.hidden = false
             
             const infoImg =  document.querySelector(".infoDiv img")
-            infoImg.setAttribute("src", `img/${thisObj.img}`)
+            // infoImg.setAttribute("src", `img/${thisObj.img}`)
+            URL.revokeObjectURL(infoImg.src)
+            infoImg.src = thisObj.img
+
+
             const spanAll = document.querySelectorAll(".infoDiv span")
             
-            spanAll[0].textContent = `Name: ${thisObj.name}`
-            spanAll[1].textContent = `Second Name: ${thisObj.surname}`
-            spanAll[2].textContent = `Old: ${thisObj.old}`
-            spanAll[3].textContent = `Tel:  ${thisObj.tel}`
-            spanAll[4].textContent = `Company: ${thisObj.company}`
-            spanAll[5].textContent = `Add date: ${thisObj.data} `
-            spanAll[6].textContent = `Add time: ${thisObj.time}`
-            
+            spanAll[0].textContent = `First Name: ${thisObj.name}`
+            spanAll[1].textContent = `Last Name:  ${thisObj.surname}`
+            spanAll[2].textContent = `Old:        ${thisObj.old}`
+            spanAll[3].textContent = `Tel:        ${thisObj.tel}`
+            spanAll[4].textContent = `Adress:     ${thisObj.company}`
+            spanAll[5].textContent = `Add date:   ${thisObj.data} `
+            spanAll[6].textContent = `Add time:   ${thisObj.time}`
+            spanAll[7].textContent = `Edit changes...`
+
+            const editIcon = document.createElement("img");
+    
+            editIcon.setAttribute("src", `img/edit.png`)
+            editIcon.classList.add("icons")
+            // spanAll[7].append(editIcon)
+            console.log(thisObj)
+
+
             const infoExit = document.querySelector(".infoExit")
-            // console.log(infoExit)
             infoExit.addEventListener("click", function(e){
                 infoDiv.hidden =true
             })
@@ -155,7 +174,7 @@ form.addEventListener("submit", function(e){
     toggle = !toggle 
     e.preventDefault()
     fo["id"] = id
-    fo["img"] = form[7].files[0] ? form[7].files[0].name : "";
+    fo["img"] = form[7].files[0] ? URL.createObjectURL(form[7].files[0]) : 'img/people3.png';
     for(let i of form.children){
         if(i.name) fo[i.name] = i.value
     }
@@ -177,20 +196,26 @@ function addTable(fo) {
     const tr = document.createElement("tr")
     for(let i in fo){
         const td = document.createElement("td");
-       
+        if(i == 'data' || i == 'time' || i == 'old' || i == "edit") continue
+        // console.log(i)
         if(i != "img") td.textContent = fo[i]
         if(i == "edit") icons("edit",td)
         else if( i == "delet") icons("delet",td)
         else if( i == "info") icons("info",td)
         else if(i == "img") {
             const userImg = document.createElement("img");
-            userImg.setAttribute("src", `img/${fo[i]}`)
+            // userImg.setAttribute("src", `img/${fo[i]}`)
+            // URL.revokeObjectURL(userImg)
+
+            URL.revokeObjectURL(userImg.src)
+            userImg.src = fo[i]
+
+
             userImg.classList.add("userImg")
             td.appendChild(userImg)
         }
         tr.appendChild(td)
     }
-    // console.log(fo)
     table.appendChild(tr)
 }
 

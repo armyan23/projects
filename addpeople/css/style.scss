@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content{
+    width: 100%;
+    display: flex;
+    height: 500px;
+    &:only-child{
+        width: 50%;
+    }
+}
+main{
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+}
+
+#formWindowBtn{
+    padding: 15px 40px;    
+    margin: 4% auto;
+    display: block;
+}
+#formWindow{
+    border-radius: 5%;
+    display: none;
+    position: absolute;
+    width: max-content;
+    padding: 4% 0 2% 0;
+    top: 15%;
+    left: 32%;
+    background-color: #B4E6EE;
+    form > input{
+        display: block;
+        margin: 20px auto;
+        &[type='file']{
+            width: 70%;
+        }
+    }
+    #closeWindow{
+        position: absolute;
+        top: 4%;
+        right: 5%;
+        img{
+            width: 35px;
+        }
+    }
+}
+#cl{
+    margin: 20px auto;
+    width: max-content;
+}
+table{
+    overflow-x: scroll;
+    border-collapse: collapse;
+    th{
+        width: max-content;
+        padding: 20px 30px;
+    }
+    td{
+        margin: 0 auto;
+        text-align: center;
+        aspect-ratio: 1;
+        padding: 14px 0;
+        overflow-x: scroll;
+        overflow: overlay;
+        overflow-wrap: break-word;
+    }
+    tr{
+        border-bottom: 1px solid #C9CFDA;
+    }
+}
+
+.infoImg{
+    display: inline-block;
+    vertical-align: top;
+}
+.icons{
+    width: 20px;
+    cursor: pointer;
+}
+.userImg{
+    width: 80px;
+}
+
+.editInput{
+    width: 90px;
+    height: 25px;
+    font-size: 16px;
+}
+.clearTable{
+    margin: 25px auto;
+    display: block;
+    width: 100px;
+    height: 50px;
+}
+
+
+
+
+.infoDiv{
+    width: 100px;
+    background-color: #007c84f7;
+    min-width: 300px;
+    border-radius: 5px;
+    position: absolute;
+    left: 34%;
+    top: 15%;
+    .infoContent{
+        max-width: 200px;
+        margin: 50px auto;
+        >img{
+            width: 200px;
+        }
+    }
+    .infoExit{
+        height: 60px;
+        position: absolute;
+        top: 2%;
+        right: 5%;
+        background-color: transparent;
+        border: none;
+        img{
+            width:35px;
+            cursor: pointer;
+        }
+    }
+}

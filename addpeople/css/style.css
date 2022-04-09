@@ -5,10 +5,6 @@
           box-sizing: border-box;
 }
 
-main {
-  position: relative;
-}
-
 .content {
   width: 100%;
   display: -webkit-box;
@@ -21,61 +17,50 @@ main {
   width: 50%;
 }
 
-.infoDiv {
-  width: 100px;
-  background-color: #8a939e94;
-  margin-left: 50px;
-  min-width: 400px;
-  border-radius: 5px;
+main {
   position: relative;
-}
-
-.infoContent {
-  max-width: 200px;
-  margin: 50px auto;
-}
-
-.infoContent img {
-  width: 200px;
-  border: 1px solid white;
-}
-
-.infoImg {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.infoExit {
-  height: 60px;
-  position: absolute;
-  top: 7px;
-  right: 50px;
-  background-color: transparent;
-  border: none;
-}
-
-.infoExit img {
-  width: 50px;
-  cursor: pointer;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #formWindowBtn {
   padding: 15px 40px;
+  margin: 4% auto;
+  display: block;
 }
 
 #formWindow {
+  border-radius: 5%;
+  display: none;
   position: absolute;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  top: 20%;
-  left: 35%;
-  background-color: rgba(115, 177, 179, 0.916);
+  padding: 4% 0 2% 0;
+  top: 15%;
+  left: 32%;
+  background-color: #B4E6EE;
 }
 
 #formWindow form > input {
   display: block;
   margin: 20px auto;
+}
+
+#formWindow form > input[type='file'] {
+  width: 70%;
+}
+
+#formWindow #closeWindow {
+  position: absolute;
+  top: 4%;
+  right: 5%;
+}
+
+#formWindow #closeWindow img {
+  width: 35px;
 }
 
 #cl {
@@ -86,9 +71,7 @@ main {
 }
 
 table {
-  width: 70%;
   overflow-x: scroll;
-  border: 1px solid black;
   border-collapse: collapse;
 }
 
@@ -96,23 +79,26 @@ table th {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  padding: 10px;
-  border: 1px solid black;
+  padding: 20px 30px;
 }
 
 table td {
   margin: 0 auto;
   text-align: center;
   aspect-ratio: 1;
-  border: 1px solid black;
-  padding: 2px;
+  padding: 14px 0;
   overflow-x: scroll;
   overflow: overlay;
   overflow-wrap: break-word;
 }
 
 table tr {
-  height: 50px;
+  border-bottom: 1px solid #C9CFDA;
+}
+
+.infoImg {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .icons {
@@ -121,7 +107,7 @@ table tr {
 }
 
 .userImg {
-  width: 70px;
+  width: 80px;
 }
 
 .editInput {
@@ -135,5 +121,38 @@ table tr {
   display: block;
   width: 100px;
   height: 50px;
+}
+
+.infoDiv {
+  width: 100px;
+  background-color: #007c84f7;
+  min-width: 300px;
+  border-radius: 5px;
+  position: absolute;
+  left: 34%;
+  top: 15%;
+}
+
+.infoDiv .infoContent {
+  max-width: 200px;
+  margin: 50px auto;
+}
+
+.infoDiv .infoContent > img {
+  width: 200px;
+}
+
+.infoDiv .infoExit {
+  height: 60px;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  background-color: transparent;
+  border: none;
+}
+
+.infoDiv .infoExit img {
+  width: 35px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,74 +9,78 @@
         <title>Document</title>
     </head>
     <body>
-        <!-- <p>Change design</p> -->
+        <h1>changes...</h1>
         <div class="content">
             <main>
-                <button id='formWindowBtn'>Add new contact</button>
-                <div id="formWindow">
-                    <form action="#" id="form">
-                        <input type="text" placeholder="Name" name="name" >
-                        <input type="text" placeholder="Surname" name="surname" >
-                        <input type="number" placeholder="Old" name="old" >
-                        <input type="tel" placeholder="Tel" name="tel" >
-                        <input type="text" placeholder="Adress" name="company">
-                        <input type="hidden" name="data" >
-                        <input type="hidden" name="time" >
-                        <input type="file" >
-                        <div id="cl">
-                            <input type="submit">
-                            <input type="reset">
-                        </div>
-                    </form>
+                <div>
+                    <button id='formWindowBtn'>Add new contact</button>
+                    <div id="formWindow">
+                        <form action="#" id="form" method="get" >
+                            <input type="text" placeholder="Name" name="name" >
+                            <input type="text" placeholder="Surname" name="surname" >
+                            <input type="number" placeholder="Old" name="old" >
+                            <input type="tel" placeholder="Tel" name="tel" >
+                            <input type="text" placeholder="Adress" name="company">
+                            <input type="hidden" name="data" >
+                            <input type="hidden" name="time" >
+                            <input type="file" >
+                            <div id="cl">
+                                <input type="submit">
+                                <input type="reset">
+                            </div>
+                        </form>
+                        <span id="closeWindow"><img src="img/exit.png" class="icons" alt="Exit"></span>
+                    </div>
+                    <table>
+                        <thead>
+                            <th>ID</th>
+                            <th>Img</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Tel</th>
+                            <th>Address</th>
+                            <!-- <th>Old</th> -->
+                            <!-- <th>Data Add</th>-->
+                            <!-- <th>Time Add</th>  -->
+                            <!-- <th>Edit</th> -->
+                            <th>Delet</th>
+                            <th>Info</th>
+                        </thead>
+                        <tbody>
+                            <!-- <tr>
+                                    <td>1</td>
+                                    <td><img src="img/people1.png" class="userImg"></td>
+                                    <td>Jon</td>
+                                    <td>Jordan</td>
+                                    <td>30</td>
+                                    <td>+177015423</td>
+                                    <td>USA</td>
+                                    <td>09.04.2022</td>
+                                    <td>02:01:39</td>
+                                    <td><img src="img/edit.png" class="icons"></td>
+                                    <td><img src="img/delet.png" class="icons"></td>
+                                    <td><img src="img/info.png" class="icons"></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <button class="clearTable">Clear</button>
                 </div>
-                <table>
-                    <thead>
-                        <th>ID</th>
-                        <th>Img</th>
-                        <th>Name</th>
-                        <th>Second_Name</th>
-                        <th>Old</th>
-                        <th>Tel</th>
-                        <th>Address</th>
-                        <th>Data_Add</th>
-                        <th>Time_Add</th>
-                        <th>Edit____</th>
-                        <th>Delet</th>
-                        <th>Info</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><img src="img/people1.png" class="userImg"></td>
-                            <td>Jon</td>
-                            <td>Jordan</td>
-                            <td>30</td>
-                            <td>+177015423</td>
-                            <td>USA</td>
-                            <td>09.04.2022</td>
-                            <td>02:01:39</td>
-                            <td><img src="img/edit.png" class="icons"></td>
-                            <td><img src="img/delet.png" class="icons"></td>
-                            <td><img src="img/info.png" class="icons"></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button class="clearTable">Clear</button>
                 
-            </main>
-            <div class="infoDiv" hidden >
-                <div class="infoContent">
-                    <img src="img/people 2.png" alt="">
-                    <span>Name</span><br>
-                    <span>Second Name</span><br>
-                    <span>Old</span><br>
-                    <span>Telefon</span><br>
-                    <span>Address</span><br>
-                    <span>Data Add</span><br>
-                    <span>Time Add</span><br>
+                <div class="infoDiv" hidden >
+                    <div class="infoContent">
+                        <img src="img/people 2.png" alt="">
+                        <span>Name</span><br>
+                        <span>Second Name</span><br>
+                        <span>Old</span><br>
+                        <span>Telefon</span><br>
+                        <span>Address</span><br>
+                        <span>Data Add</span><br>
+                        <span>Time Add</span><br>
+                        <span>Edit</span><br>
+                    </div>
+                    <button class="infoExit"><img src="img/exit.png" alt=""></button>
                 </div>
-                <button class="infoExit"><img src="img/exit.png" alt=""></button>
-            </div>
+            </main>
         </div>
     </body>
 </html>
