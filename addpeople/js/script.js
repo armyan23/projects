@@ -2,7 +2,15 @@ const form = document.querySelector("form")
 const table = document.querySelector("tbody")
 const userArr = []
 const fo = {}
+let toggle = true
 let id = !localStorage.getItem("idEnd") ? 1 : localStorage.getItem("idEnd")
+
+// document.getElementById('formWindowBtn').focus();
+document.getElementById('formWindowBtn').addEventListener('click', function(){
+    if(toggle) document.getElementById('formWindow').style.display = 'block'
+    else if(!toggle) document.getElementById('formWindow').style.display = 'none'
+    toggle = !toggle 
+})
 
 // Data Registr
 function timeReg(par){
@@ -126,11 +134,11 @@ function icons(icon, td) {
             spanAll[2].textContent = `Old: ${thisObj.old}`
             spanAll[3].textContent = `Tel:  ${thisObj.tel}`
             spanAll[4].textContent = `Company: ${thisObj.company}`
-            spanAll[5].textContent = `Regist date: ${thisObj.data} `
-            spanAll[6].textContent = `Regist time: ${thisObj.time}`
+            spanAll[5].textContent = `Add date: ${thisObj.data} `
+            spanAll[6].textContent = `Add time: ${thisObj.time}`
             
             const infoExit = document.querySelector(".infoExit")
-            console.log(infoExit)
+            // console.log(infoExit)
             infoExit.addEventListener("click", function(e){
                 infoDiv.hidden =true
             })
@@ -142,8 +150,10 @@ function icons(icon, td) {
 
 // Submit kochakne
 form.addEventListener("submit", function(e){
+    
+    document.getElementById('formWindow').style.display = 'none'
+    toggle = !toggle 
     e.preventDefault()
-   
     fo["id"] = id
     fo["img"] = form[7].files[0] ? form[7].files[0].name : "";
     for(let i of form.children){

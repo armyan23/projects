@@ -5,12 +5,12 @@ const equals = document.getElementById('equals')
 let toggle = true
 let operator = false
 let refresh = false
+let module = false
 let oper = ''
 let numberFirst = ''
 let numberSecond = ''
 
 function clearCalc(){
-    
     toggle = true
     operator = false
     refresh = false
@@ -35,21 +35,35 @@ document.getElementsByClassName('calcParent')[0].addEventListener('click',functi
                 equation.textContent += e.target.textContent
                 operator = false
             }
+            module = true
         }else if(e.target.textContent == 'Ac'){
             clearCalc()
-        }else if(e.target.textContent != '=' && operator ){
+        }else if(e.target.textContent != '=' && operator){
             oper = e.target.textContent
             equation.textContent += ` ${oper} `
             toggle = !toggle
             operator = false
-        }else if(e.target.textContent == '='){
+        }
+        else if(e.target.textContent == '%'  && numberSecond && module){
+            module = !module
+            equation.textContent += `%`
+            equals.textContent = '='
+            if(oper == '+') result.textContent = +numberFirst + ((+numberFirst)*(+numberSecond)/100)
+            else if(oper == '-') result.textContent = +numberFirst - ((+numberFirst)*(+numberSecond)/100)
+            else if(oper == '*') result.textContent = +numberFirst / 100 * +numberSecond
+            else if(oper == '/') result.textContent = +numberFirst * 100 / +numberSecond
+        }
+        else if(e.target.textContent == '='){
             refresh = !refresh
             equals.textContent = '='
             if(oper == '+') result.textContent = +numberFirst + +numberSecond
             else if(oper == '-') result.textContent = +numberFirst - +numberSecond
             else if(oper == '*') result.textContent = +numberFirst * +numberSecond
             else if(oper == '/') result.textContent = +numberFirst / +numberSecond
-            else if(oper == '%') result.textContent = +numberFirst / 100
+            else if(oper == '%') {
+                equation.textContent = `${numberFirst} % * ${numberSecond} `
+                result.textContent = +numberFirst / 100 * +numberSecond
+            }
             else result.textContent = `Invalid value`
         }
     }
