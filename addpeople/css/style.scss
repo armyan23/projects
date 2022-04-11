@@ -31,6 +31,7 @@ main{
     top: 15%;
     left: 32%;
     background-color: #B4E6EE;
+    background: linear-gradient(to bottom, #514A9D, #24C6DC); 
     form > input{
         display: block;
         margin: 20px auto;
@@ -66,6 +67,9 @@ table{
         overflow-x: scroll;
         overflow: overlay;
         overflow-wrap: break-word;
+        max-width: 550px;
+        width: 10%;
+        word-break: break-all;
     }
     tr{
         border-bottom: 1px solid #C9CFDA;
@@ -85,7 +89,7 @@ table{
 }
 
 .editInput{
-    width: 90px;
+    width: 120px;
     height: 25px;
     font-size: 16px;
 }
@@ -101,17 +105,33 @@ table{
 
 .infoDiv{
     width: 100px;
-    background-color: #007c84f7;
+    background: linear-gradient(to bottom, #514A9D, #24C6DC);
+    color: white;
     min-width: 300px;
     border-radius: 5px;
     position: absolute;
     left: 34%;
     top: 15%;
+    width: 100%;
+    max-width: 360px;
     .infoContent{
-        max-width: 200px;
-        margin: 50px auto;
+        max-width: max-content;
+        margin: 5% auto ;
+        padding: 20px;
         >img{
             width: 200px;
+            margin: 0 auto 5%;
+            display: block;
+        }
+        table{
+            text-align: start;
+            // width: max-content;
+            td{
+                text-align: start;
+                word-break: break-word;
+                min-width: 110px;
+                padding: 8px 15px 8px 0;
+            }
         }
     }
     .infoExit{

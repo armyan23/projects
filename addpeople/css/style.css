@@ -42,6 +42,8 @@ main {
   top: 15%;
   left: 32%;
   background-color: #B4E6EE;
+  background: -webkit-gradient(linear, left top, left bottom, from(#514A9D), to(#24C6DC));
+  background: linear-gradient(to bottom, #514A9D, #24C6DC);
 }
 
 #formWindow form > input {
@@ -90,6 +92,9 @@ table td {
   overflow-x: scroll;
   overflow: overlay;
   overflow-wrap: break-word;
+  max-width: 550px;
+  width: 10%;
+  word-break: break-all;
 }
 
 table tr {
@@ -111,7 +116,7 @@ table tr {
 }
 
 .editInput {
-  width: 90px;
+  width: 120px;
   height: 25px;
   font-size: 16px;
 }
@@ -125,21 +130,41 @@ table tr {
 
 .infoDiv {
   width: 100px;
-  background-color: #007c84f7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#514A9D), to(#24C6DC));
+  background: linear-gradient(to bottom, #514A9D, #24C6DC);
+  color: white;
   min-width: 300px;
   border-radius: 5px;
   position: absolute;
   left: 34%;
   top: 15%;
+  width: 100%;
+  max-width: 360px;
 }
 
 .infoDiv .infoContent {
-  max-width: 200px;
-  margin: 50px auto;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 5% auto;
+  padding: 20px;
 }
 
 .infoDiv .infoContent > img {
   width: 200px;
+  margin: 0 auto 5%;
+  display: block;
+}
+
+.infoDiv .infoContent table {
+  text-align: start;
+}
+
+.infoDiv .infoContent table td {
+  text-align: start;
+  word-break: break-word;
+  min-width: 110px;
+  padding: 8px 15px 8px 0;
 }
 
 .infoDiv .infoExit {
