@@ -14,7 +14,7 @@ main {
   background: #DAF0FF;
 }
 
-main .background {
+.background {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,17 +31,23 @@ main .background {
   aspect-ratio: 1;
   border-radius: 100%;
   background: #109DFF;
+  -webkit-transition: ease all 800ms;
+  transition: ease all 800ms;
 }
 
 .calcParent {
   font-family: 'Poppins', sans-serif;
   position: relative;
+  max-width: 59%;
+  min-width: 111px;
   width: 45%;
   height: 90%;
   background: linear-gradient(167.27deg, #F7F8FB -5.94%, rgba(247, 248, 251, 0.19) 103.62%);
   -webkit-backdrop-filter: blur(102px);
           backdrop-filter: blur(102px);
   border-radius: 39px;
+  -webkit-transition: ease all 800ms;
+  transition: ease all 800ms;
 }
 
 .calcParent h1, .calcParent h3, .calcParent h4 {
@@ -102,6 +108,7 @@ main .background {
 
 .calcParent .vertical > :first-child {
   width: 75%;
+  padding-left: 2%;
 }
 
 .calcParent .vertical .smallParentFooter {
@@ -126,5 +133,21 @@ main .background {
   background: linear-gradient(203.57deg, #ADD8FF -8.99%, rgba(173, 216, 255, 0.28) 111.42%);
   -webkit-box-shadow: inset 0px 0px 9px rgba(255, 255, 255, 0.43);
           box-shadow: inset 0px 0px 9px rgba(255, 255, 255, 0.43);
+}
+
+@media screen and (max-width: 520px) {
+  .calcParent {
+    border-radius: 20px;
+  }
+  main {
+    padding: 0;
+  }
+  .background {
+    border-radius: 0;
+    width: 100%;
+  }
+  .calcParent .smallChild, .calcParent .vertical .smallChildEquals, .calcParent .vertical .smallChildZero, .calcParent .vertical .smallChildEquals, .calcParent .vertical .smallChildZero {
+    border-radius: 8px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

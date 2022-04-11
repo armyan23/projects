@@ -10,28 +10,34 @@ main{
     min-width: 200px;
     max-width: 1000px;
     background: #DAF0FF;
-    .background{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin: 0 auto;
-        width: 90%;
-        max-width: 700px;
-        aspect-ratio: 1;
-        border-radius: 100%;
-        background: #109DFF;
-    }
+   
 }
-
+.background{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 700px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background: #109DFF;
+    transition: ease all 800ms;
+}
 .calcParent{
     font-family: 'Poppins', sans-serif;
     position: relative;
+    
+    max-width: 59%;
+    min-width: 111px;
     width: 45%;
     height: 90%;
+    
     background: linear-gradient(167.27deg, #F7F8FB -5.94%, rgba(247, 248, 251, 0.19) 103.62%);
     backdrop-filter: blur(102px);
     border-radius: 39px;
+    transition: ease all 800ms;
     h1, h3,h4{
         margin: 0;
         text-align: end;
@@ -77,6 +83,7 @@ main{
         display: flex;
         >:first-child{
             width: 75%;
+            padding-left: 2%;
         }
         .smallParentFooter{
             display: flex;
@@ -99,3 +106,18 @@ main{
     }
 }
 
+@media screen and (max-width: 520px) {
+    .calcParent{
+        border-radius: 20px;
+    }
+    main{
+        padding: 0;
+    }
+   .background{
+        border-radius: 0;
+        width: 100%;
+    }
+    .calcParent .smallChild, .calcParent .vertical .smallChildEquals, .calcParent .vertical .smallChildZero {
+        border-radius: 8px;
+    }
+}
