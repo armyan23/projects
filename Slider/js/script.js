@@ -80,8 +80,9 @@ myForm[1].addEventListener("click", function(e) {
     let newImg = document.createElement("img")
     imgArray.push(newImg)
     over.appendChild(newImg)
-    newImg.setAttribute("src", `img/${imgName}`)
-
+    URL.revokeObjectURL(myForm[0].files[0].src)
+    newImg.src = URL.createObjectURL(myForm[0].files[0])
+    
     circle(imgArray.length-1)
   
     e.preventDefault()
