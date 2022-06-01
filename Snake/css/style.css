@@ -3,9 +3,11 @@ table {
   aspect-ratio: 1;
   max-height: 500px;
   border: 1px solid black;
+  /* border-collapse: collapse; */
 }
 
 #parent {
+  display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;

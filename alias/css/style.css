@@ -3,16 +3,19 @@ body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  height: calc(100vh - 106px);
 }
 
 main {
   width: 100%;
-  max-width: 1440px;
+  height: 100%;
   margin: 0 auto;
   padding: 5% 0;
   position: relative;
   background-image: url("../img/photo/1.jpg");
   background-repeat: no-repeat;
+  background-size: auto;
+  background-repeat: round;
 }
 
 .content {
@@ -215,5 +218,33 @@ main {
   text-align: center;
   font-size: 50px;
   padding-bottom: 10px;
+}
+
+@media screen and (max-width: 320px) {
+  main {
+    padding: 0;
+  }
+  .content {
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .content #rules img {
+    top: 1% !important;
+  }
+  .content .contentChild {
+    width: 100% !important;
+    border-radius: 0px !important;
+    background-color: #f0f8ff57 !important;
+  }
+  .formAlias form div input:not([type="submit"]) {
+    height: 20px !important;
+  }
+  .formAlias form div:nth-last-child(1) input {
+    height: 35px !important;
+  }
+  .formAlias form #submit input {
+    display: block;
+    margin: 0 auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */

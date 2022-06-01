@@ -29,8 +29,8 @@ body{
 }
   
 iframe{
-    width: calc(100% - 10px);
-    height: calc(100vh - 80px);
+    width: calc(100% - 0px);
+    height: calc(100vh - 53px);
 }
 @media screen and (max-width: 655px) {
   .menu a{display: none;}
